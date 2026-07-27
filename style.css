@@ -318,4 +318,156 @@ h1{
 }
 
 
+}/* CASHCOLLEGE MODERN WALL STREET OVERRIDE */
+
+body{
+background:#030303 !important;
+font-family:'Segoe UI',Arial,sans-serif;
+}
+
+
+.terminal{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+
+header{
+background:
+linear-gradient(135deg,#151515,#050505) !important;
+
+border:1px solid #b8860b !important;
+
+border-radius:25px;
+
+box-shadow:
+0 0 40px rgba(212,175,55,.25);
+
+padding:30px;
+
+}
+
+
+h1{
+color:#d4af37 !important;
+font-size:32px;
+letter-spacing:3px;
+}
+
+
+.live{
+color:#00ff88 !important;
+font-weight:800;
+}
+
+
+
+.box,
+.price-card{
+
+background:
+linear-gradient(
+145deg,
+#151515,
+#080808
+) !important;
+
+
+border:
+
+1px solid rgba(212,175,55,.35) !important;
+
+
+border-radius:20px !important;
+
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.8);
+
+
+padding:25px !important;
+
+}
+
+
+
+.top-grid{
+
+display:grid !important;
+
+grid-template-columns:1fr 1fr;
+
+gap:25px;
+
+}
+
+
+
+h2{
+
+color:#d4af37 !important;
+
+font-size:16px;
+
+letter-spacing:2px;
+
+}
+
+
+
+.buy{
+
+font-size:45px !important;
+
+color:#00ff88 !important;
+
+text-shadow:
+
+0 0 25px #00ff88;
+
+}
+
+
+
+#news p{
+
+background:#050505 !important;
+
+border-left:4px solid #d4af37;
+
+padding:15px;
+
+border-radius:10px;
+
+}
+
+
+
+.chart-box,
+.chart-card{
+
+background:#090909;
+
+border:1px solid rgba(212,175,55,.3);
+
+border-radius:25px;
+
+padding:20px;
+
+margin-top:25px;
+
+}
+
+
+
+@media(max-width:700px){
+
+.top-grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
