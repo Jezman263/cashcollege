@@ -1,24 +1,40 @@
-body {
+/* ======================================
+   CASHCOLLEGE XAUUSD AI
+   MODERN WALL STREET TERMINAL THEME
+====================================== */
 
-background:
-linear-gradient(135deg,#020202,#0b0b0b);
 
-font-family:
-"Inter",
-"Segoe UI",
-Arial;
+*{
+    box-sizing:border-box;
+}
 
-color:white;
-margin:0;
+
+body{
+
+    margin:0;
+
+    background:
+    radial-gradient(circle at top,#1c1c1c,#050505 60%);
+
+    color:white;
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
 
 }
 
 
+/* MAIN CONTAINER */
+
 .terminal{
 
-max-width:1100px;
-margin:auto;
-padding:25px;
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:25px;
 
 }
 
@@ -28,120 +44,114 @@ padding:25px;
 
 header{
 
-background:
-rgba(20,20,20,0.8);
+    background:
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.02)
+    );
 
-border:
+    border:1px solid rgba(212,175,55,.35);
 
-1px solid rgba(212,175,55,.25);
+    border-radius:20px;
 
-border-radius:20px;
+    padding:25px;
 
-padding:25px;
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.7);
 
-backdrop-filter:blur(20px);
-
-box-shadow:
-
-0 0 40px rgba(212,175,55,.15);
+    backdrop-filter:blur(15px);
 
 }
 
 
 h1{
 
-color:#d4af37;
+    color:#d4af37;
 
-font-size:28px;
+    letter-spacing:2px;
 
-letter-spacing:3px;
+    font-size:28px;
 
 }
 
 
+header p{
+
+    color:#888;
+
+}
+
+
+
+/* LIVE */
 
 .live{
 
-display:inline-block;
+    color:#00ff88;
 
-background:#052d18;
+    font-weight:bold;
 
-color:#00ff88;
+    animation:pulse 1.5s infinite;
 
-padding:8px 18px;
+}
 
-border-radius:30px;
 
-border:1px solid #00ff88;
+@keyframes pulse{
 
-font-weight:bold;
+    50%{
+
+        opacity:.4;
+
+    }
 
 }
 
 
 
-/* GRID */
+/* CARDS */
+
+.box,
+.price-card,
+.chart-box{
+
+    background:
+
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.09),
+    rgba(255,255,255,.03)
+    );
+
+    border:
+
+    1px solid rgba(212,175,55,.25);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-top:20px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.6);
+
+}
+
+
+
+/* TOP SECTION */
 
 .top-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
-gap:20px;
-
-}
-
-
-
-/* ALL CARDS */
-
-.box,
-.price-card{
-
-
-background:
-
-linear-gradient(
-145deg,
-rgba(255,255,255,.08),
-rgba(255,255,255,.02)
-);
-
-
-border:
-
-1px solid rgba(255,255,255,.12);
-
-
-border-radius:22px;
-
-
-padding:25px;
-
-
-margin-top:20px;
-
-
-backdrop-filter:
-
-blur(15px);
-
-
-box-shadow:
-
-0 25px 50px rgba(0,0,0,.6);
-
-transition:.3s;
-
-}
-
-
-.box:hover{
-
-transform:translateY(-5px);
-
-border-color:#d4af37;
+    gap:20px;
 
 }
 
@@ -149,49 +159,43 @@ border-color:#d4af37;
 
 /* TITLES */
 
-
 h2{
 
-font-size:14px;
+    color:#d4af37;
 
-letter-spacing:2px;
+    font-size:15px;
 
-color:#bfa34a;
+    letter-spacing:2px;
 
-text-transform:uppercase;
+    text-transform:uppercase;
 
 }
 
 
 
-/* BUY SIGNAL */
-
+/* GOLD SIGNAL */
 
 .buy{
 
-font-size:45px;
+    font-size:42px;
 
-font-weight:900;
+    font-weight:900;
 
-color:#00ff88;
+    color:#00ff88;
 
-text-shadow:
+    text-shadow:
 
-0 0 25px #00ff88;
+    0 0 25px #00ff88;
 
 }
 
 
 
-/* GOLD PRICE */
+/* CONFIDENCE */
 
-#goldPrice{
+b{
 
-font-size:60px;
-
-font-weight:900;
-
-color:white;
+    color:#d4af37;
 
 }
 
@@ -201,28 +205,74 @@ color:white;
 
 #news p{
 
-background:#090909;
+    background:#090909;
 
-padding:14px;
+    padding:15px;
 
-border-radius:12px;
+    border-radius:12px;
 
-border-left:
+    border-left:
 
-3px solid #d4af37;
+    3px solid #d4af37;
 
 }
 
 
 
-/* AI SCORE */
+/* CHART */
 
+.chart-box{
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+
+
+iframe{
+
+    border-radius:15px;
+
+}
+
+
+
+/* AI ANALYSIS */
+
+.box p{
+
+    color:#ddd;
+
+    font-size:16px;
+
+}
+
+
+
+/* HISTORICAL MATCHES */
 
 .gold{
 
-font-size:55px;
+    color:#d4af37;
 
-color:#d4af37;
+    font-size:55px;
+
+}
+
+
+
+/* HOVER EFFECT */
+
+.box:hover,
+.chart-box:hover{
+
+    border-color:#d4af37;
+
+    transform:translateY(-3px);
+
+    transition:.3s;
 
 }
 
@@ -232,24 +282,40 @@ color:#d4af37;
 
 @media(max-width:700px){
 
-.top-grid{
 
-grid-template-columns:1fr;
+.terminal{
+
+    padding:12px;
 
 }
 
 
-.terminal{
+.top-grid{
 
-padding:12px;
+    grid-template-columns:1fr;
+
+}
+
+
+h1{
+
+    font-size:21px;
 
 }
 
 
 .buy{
 
-font-size:32px;
+    font-size:32px;
 
 }
+
+
+.chart-box iframe{
+
+    height:350px;
+
+}
+
 
 }
