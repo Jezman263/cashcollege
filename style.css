@@ -1,95 +1,225 @@
 body {
 
-background:#050505;
-font-family:Arial;
+background:
+radial-gradient(circle at top,#1a1a1a,#050505 60%);
+
+font-family:
+"Segoe UI",
+Arial,
+sans-serif;
+
 color:white;
 margin:0;
 
 }
 
 
-.terminal{
+.terminal {
 
-max-width:600px;
+max-width:900px;
 margin:auto;
-padding:20px;
+padding:25px;
 
 }
 
 
-header{
+/* HEADER */
 
-border-bottom:1px solid #c9a227;
-padding-bottom:20px;
+header {
+
+background:
+linear-gradient(145deg,#111,#050505);
+
+border:1px solid #2c2c2c;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:
+0 0 30px rgba(212,175,55,0.15);
 
 }
 
 
-h1{
+h1 {
 
 color:#d4af37;
-font-size:24px;
+
+letter-spacing:2px;
 
 }
 
 
-.live{
+header p {
 
-color:#00ff66;
+color:#888;
+
+}
+
+
+
+/* LIVE LIGHT */
+
+.live {
+
+display:inline-block;
+
+color:#00ff88;
+
 font-weight:bold;
 
-}
+background:#071b12;
 
+padding:8px 15px;
 
+border-radius:20px;
 
-.box{
-
-background:#111;
-border:1px solid #333;
-border-radius:12px;
-padding:20px;
-margin-top:15px;
+border:1px solid #00ff88;
 
 }
 
 
 
-h2{
+/* CARDS */
+
+.box,
+.price-card {
+
+background:
+
+linear-gradient(
+145deg,
+rgba(255,255,255,0.08),
+rgba(255,255,255,0.02)
+);
+
+backdrop-filter:blur(15px);
+
+border:
+
+1px solid rgba(212,175,55,0.25);
+
+
+border-radius:20px;
+
+padding:25px;
+
+margin-top:20px;
+
+
+box-shadow:
+
+0 20px 40px rgba(0,0,0,.6);
+
+}
+
+
+
+/* SECTION TITLES */
+
+h2 {
+
+font-size:15px;
+
+letter-spacing:2px;
 
 color:#d4af37;
-font-size:18px;
+
+text-transform:uppercase;
 
 }
 
 
-.buy{
 
-font-size:35px;
-color:#00ff66;
-font-weight:bold;
+/* GOLD PRICE */
+
+#goldPrice {
+
+font-size:55px;
+
+font-weight:800;
+
+color:white;
+
+text-shadow:
+
+0 0 20px rgba(212,175,55,.7);
 
 }
 
 
-.gold{
+
+/* BUY SIGNAL */
+
+
+.buy {
+
+font-size:42px;
+
+font-weight:900;
+
+color:#00ff88;
+
+
+text-shadow:
+
+0 0 20px #00ff88;
+
+}
+
+
+
+/* GOLD SCORE */
+
+.gold {
+
+font-size:55px;
 
 color:#d4af37;
-font-size:30px;
+
 
 }
 
 
-p{
+
+/* NEWS */
+
+#news p {
+
+background:#0b0b0b;
+
+padding:15px;
+
+border-left:
+
+4px solid #d4af37;
+
+border-radius:8px;
+
+}
+
+
+
+/* DATA ROWS */
+
+
+p {
 
 font-size:16px;
 
-  .price-card{
+color:#ddd;
 
-background:#111;
-border:1px solid #d4af37;
-padding:20px;
-margin-top:20px;
-border-radius:15px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.terminal{
+
+padding:12px;
 
 }
 
@@ -97,33 +227,14 @@ border-radius:15px;
 #goldPrice{
 
 font-size:40px;
-color:#d4af37;
-font-weight:bold;
 
 }
 
 
-#trend{
+.buy{
 
-color:#00ff66;
-
-}
-
-
-.live{
-
-color:#00ff66;
-font-weight:bold;
-animation:pulse 1s infinite;
+font-size:30px;
 
 }
 
-
-@keyframes pulse{
-
-50%{
-opacity:0.4;
-}
-
-}
 }
