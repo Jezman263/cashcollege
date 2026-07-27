@@ -1,140 +1,341 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CashCollege XAUUSD AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
+<script src="https://s3.tradingview.com/tv.js"></script>
+
 </head>
-<div class="ticker">
+
+<body>
+
+<div class="terminal">
+
+<header>
+
+<div class="logo">
 
 <div>
-XAUUSD
-<span id="goldTicker">Loading...</span>
-</div>
 
-<div>
-DXY
-<span id="dxyTicker">Loading...</span>
-</div>
-
-<div>
-US10Y
-<span id="yieldTicker">Loading...</span>
-</div>
-
-<div>
-VIX
-<span id="vixTicker">Loading...</span>
-</div>
-
-<div>
-OIL
-<span id="oilTicker">Loading...</span>
-</div>
-
-</div>
-</div>
 <h1>💰 CASHCOLLEGE XAUUSD AI</h1>
-<span class="live">● LIVE</span>
-<p>Geopolitical Gold Intelligence Terminal</p>
+
+<p>Institutional Gold Intelligence Terminal</p>
+
+</div>
+
+<div class="live">
+
+<span class="dot"></span>
+
+LIVE
+
+</div>
+
+</div>
+
 </header>
 
 
-</section>
+
+<div class="ticker">
+
+<div class="ticker-track">
+
+<span>XAUUSD <span id="goldTicker" class="up">$3450.25 ▲</span></span>
+
+<span>DXY <span id="dxyTicker" class="down">98.42 ▼</span></span>
+
+<span>US10Y <span id="yieldTicker" class="down">4.18% ▼</span></span>
+
+<span>VIX <span id="vixTicker" class="up">21.5 ▲</span></span>
+
+<span>OIL <span id="oilTicker" class="up">$82.40 ▲</span></span>
+
+<span>BRENT <span class="up">$84.10 ▲</span></span>
+
+<span>SILVER <span class="up">$39.82 ▲</span></span>
+
+<span>BTC <span class="up">$118,250 ▲</span></span>
+
+</div>
+
+</div>
+
+
+
+
 <div class="top-grid">
 
-<div class="box">
 
-<h2>🔥 GOLD SIGNAL</h2>
 
-<div class="buy">
+<div class="card signal-card">
+
+<div class="card-title">
+
+🔥 GOLD SIGNAL
+
+</div>
+
+<div class="signal">
+
 STRONG BUY
-</div>
-
-<p>Confidence: <b>92%</b></p>
-<p>Risk Level: <b>EXTREME</b></p>
 
 </div>
 
+<div class="confidence">
 
-<div class="box">
+Confidence
 
-<h2>🚨 BREAKING EVENTS</h2>
+<span>
 
-<p>🔴 Israel event detected</p>
-<p>🟡 Fed Governor speaks</p>
-<p>🔴 Russia announcement</p>
+92%
 
-</div>
-<div class="chart-box">
-
-<h2>📈 XAUUSD LIVE MARKET CHART</h2>
-
-<iframe 
-src="https://www.tradingview.com/widgetembed/?symbol=OANDA%3AXAUUSD&interval=15&theme=dark"
-width="100%"
-height="500"
-frameborder="0">
-</iframe>
-
-</section>
-
-
-
-<section class="box">
-
-<h2>🧠 AI ANALYSIS</h2>
-
-<p>Safe Haven Demand ↑</p>
-<p>Dollar Weakness ↑</p>
-<p>Treasury Yields ↓</p>
-<p>Oil Prices ↑</p>
-
-</section>
-
-
-
-<section class="box">
-
-<h2>📚 HISTORICAL MATCHES</h2>
-
-<p>Iran Conflict 2024 ........ 94%</p>
-<p>Soleimani 2020 ........... 88%</p>
-<p>Ukraine 2022 ............. 83%</p>
-<p>Hamas Attack 2023 ........ 81%</p>
-
-</section>
-
-
-
-<section class="box">
-
-<h2>📈 XAUUSD OUTLOOK</h2>
-
-<h3 class="gold">
-BUY BIAS
-</h3>
-
-<p>Expected Reaction: +40-120 pips</p>
-<p>Time Window: 0-24 Hours</p>
-
-</section>
-
+</span>
 
 </div>
 
+<div class="confidence">
+
+Risk
+
+<span>
+
+EXTREME
+
+</span>
+
+</div>
+
+<div class="meter">
+
+<div class="meter-fill"></div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="card-title">
+
+🚨 BREAKING GEOPOLITICAL EVENTS
+
+</div>
+
+<div id="news">
+
+<div class="news">
+
+🔴 Israel military operation detected
+
+</div>
+
+<div class="news">
+
+🟡 Federal Reserve Governor speech
+
+</div>
+
+<div class="news">
+
+🔴 Russia Ministry announcement
+
+</div>
+
+<div class="news">
+
+🟠 OPEC emergency meeting
+
+</div>
+
+<div class="news">
+
+🟢 IMF releases economic outlook
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="chart-card">
+
+<div class="card-title">
+
+📈 LIVE XAUUSD MARKET CHART
+
+</div>
+
+<div id="tradingview_gold" style="height:500px;"></div>
+
+</div>
+
+
+
+<script>
+
+new TradingView.widget({
+
+container_id:"tradingview_gold",
+
+symbol:"OANDA:XAUUSD",
+
+interval:"15",
+
+theme:"dark",
+
+style:"1",
+
+locale:"en",
+
+toolbar_bg:"#111",
+
+enable_publishing:false,
+
+allow_symbol_change:true,
+
+hide_side_toolbar:false,
+
+width:"100%",
+
+height:500
+
+});
+<div class="bottom-grid">
+
+<div class="card">
+
+<div class="card-title">
+🧠 AI MARKET ANALYSIS
+</div>
+
+<div class="analysis-row">
+<span>Safe Haven Demand</span>
+<span class="up">▲ Bullish</span>
+</div>
+
+<div class="analysis-row">
+<span>Dollar Index</span>
+<span class="down">▼ Weakening</span>
+</div>
+
+<div class="analysis-row">
+<span>Treasury Yields</span>
+<span class="down">▼ Falling</span>
+</div>
+
+<div class="analysis-row">
+<span>Oil Prices</span>
+<span class="up">▲ Rising</span>
+</div>
+
+<div class="analysis-row">
+<span>Market Fear (VIX)</span>
+<span class="up">▲ Increasing</span>
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-title">
+📚 HISTORICAL MATCHES
+</div>
+
+<div class="match">
+<span>Apr 2024 Iran Conflict</span>
+<span>94%</span>
+</div>
+
+<div class="match">
+<span>Jan 2020 Soleimani</span>
+<span>88%</span>
+</div>
+
+<div class="match">
+<span>Ukraine Invasion</span>
+<span>83%</span>
+</div>
+
+<div class="match">
+<span>Hamas Attack</span>
+<span>81%</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card score-card">
+
+<div class="card-title">
+
+📊 AI GOLD SCORE
+
+</div>
+
+<div class="score">
+
+92
+
+</div>
+
+<div class="signal">
+
+🟢 STRONG BUY
+
+</div>
+
+<div class="reason">
+
+Current drivers:
+
+• High geopolitical risk
+
+• Falling Treasury yields
+
+• Safe-haven demand increasing
+
+• Oil prices rising
+
+</div>
+
+</div>
+
+
+
+<footer>
+
+CashCollege XAUUSD AI © 2026
+
+<br>
+
+Institutional Geopolitical Gold Intelligence Terminal
+
+</footer>
+
+</div>
 
 <script src="script.js"></script>
-<div class="chart-box">
 
-<h2>📈 XAUUSD LIVE CHART</h2>
-
-<iframe 
-src="https://www.tradingview.com/widgetembed/?symbol=OANDA%3AXAUUSD&interval=15&theme=dark"
-width="100%"
-height="450"
-frameborder="0">
-</iframe>
-
-</div>
 </body>
+
 </html>
+</script>
