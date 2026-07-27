@@ -1,12 +1,12 @@
 body {
 
 background:
-radial-gradient(circle at top,#1a1a1a,#050505 60%);
+linear-gradient(135deg,#020202,#0b0b0b);
 
 font-family:
+"Inter",
 "Segoe UI",
-Arial,
-sans-serif;
+Arial;
 
 color:white;
 margin:0;
@@ -14,137 +14,151 @@ margin:0;
 }
 
 
-.terminal {
+.terminal{
 
-max-width:900px;
+max-width:1100px;
 margin:auto;
 padding:25px;
 
 }
 
 
+
 /* HEADER */
 
-header {
+header{
 
 background:
-linear-gradient(145deg,#111,#050505);
+rgba(20,20,20,0.8);
 
-border:1px solid #2c2c2c;
+border:
 
-padding:25px;
-
-border-radius:18px;
-
-box-shadow:
-0 0 30px rgba(212,175,55,0.15);
-
-}
-
-
-h1 {
-
-color:#d4af37;
-
-letter-spacing:2px;
-
-}
-
-
-header p {
-
-color:#888;
-
-}
-
-
-
-/* LIVE LIGHT */
-
-.live {
-
-display:inline-block;
-
-color:#00ff88;
-
-font-weight:bold;
-
-background:#071b12;
-
-padding:8px 15px;
+1px solid rgba(212,175,55,.25);
 
 border-radius:20px;
 
-border:1px solid #00ff88;
+padding:25px;
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+
+0 0 40px rgba(212,175,55,.15);
+
+}
+
+
+h1{
+
+color:#d4af37;
+
+font-size:28px;
+
+letter-spacing:3px;
 
 }
 
 
 
-/* CARDS */
+.live{
+
+display:inline-block;
+
+background:#052d18;
+
+color:#00ff88;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+border:1px solid #00ff88;
+
+font-weight:bold;
+
+}
+
+
+
+/* GRID */
+
+.top-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+}
+
+
+
+/* ALL CARDS */
 
 .box,
-.price-card {
+.price-card{
+
 
 background:
 
 linear-gradient(
 145deg,
-rgba(255,255,255,0.08),
-rgba(255,255,255,0.02)
+rgba(255,255,255,.08),
+rgba(255,255,255,.02)
 );
 
-backdrop-filter:blur(15px);
 
 border:
 
-1px solid rgba(212,175,55,0.25);
+1px solid rgba(255,255,255,.12);
 
 
-border-radius:20px;
+border-radius:22px;
+
 
 padding:25px;
+
 
 margin-top:20px;
 
 
+backdrop-filter:
+
+blur(15px);
+
+
 box-shadow:
 
-0 20px 40px rgba(0,0,0,.6);
+0 25px 50px rgba(0,0,0,.6);
+
+transition:.3s;
+
+}
+
+
+.box:hover{
+
+transform:translateY(-5px);
+
+border-color:#d4af37;
 
 }
 
 
 
-/* SECTION TITLES */
+/* TITLES */
 
-h2 {
 
-font-size:15px;
+h2{
+
+font-size:14px;
 
 letter-spacing:2px;
 
-color:#d4af37;
+color:#bfa34a;
 
 text-transform:uppercase;
-
-}
-
-
-
-/* GOLD PRICE */
-
-#goldPrice {
-
-font-size:55px;
-
-font-weight:800;
-
-color:white;
-
-text-shadow:
-
-0 0 20px rgba(212,175,55,.7);
 
 }
 
@@ -153,31 +167,31 @@ text-shadow:
 /* BUY SIGNAL */
 
 
-.buy {
+.buy{
 
-font-size:42px;
+font-size:45px;
 
 font-weight:900;
 
 color:#00ff88;
 
-
 text-shadow:
 
-0 0 20px #00ff88;
+0 0 25px #00ff88;
 
 }
 
 
 
-/* GOLD SCORE */
+/* GOLD PRICE */
 
-.gold {
+#goldPrice{
 
-font-size:55px;
+font-size:60px;
 
-color:#d4af37;
+font-weight:900;
 
+color:white;
 
 }
 
@@ -185,37 +199,45 @@ color:#d4af37;
 
 /* NEWS */
 
-#news p {
+#news p{
 
-background:#0b0b0b;
+background:#090909;
 
-padding:15px;
+padding:14px;
+
+border-radius:12px;
 
 border-left:
 
-4px solid #d4af37;
-
-border-radius:8px;
+3px solid #d4af37;
 
 }
 
 
 
-/* DATA ROWS */
+/* AI SCORE */
 
 
-p {
+.gold{
 
-font-size:16px;
+font-size:55px;
 
-color:#ddd;
+color:#d4af37;
 
 }
+
 
 
 /* MOBILE */
 
-@media(max-width:600px){
+@media(max-width:700px){
+
+.top-grid{
+
+grid-template-columns:1fr;
+
+}
+
 
 .terminal{
 
@@ -224,33 +246,10 @@ padding:12px;
 }
 
 
-#goldPrice{
-
-font-size:40px;
-
-}
-
-
 .buy{
 
-font-size:30px;
+font-size:32px;
 
-}
-
-}.top-grid{
-display:flex;
-gap:20px;
-}
-
-.top-grid .box{
-flex:1;
-}
-
-
-@media(max-width:700px){
-
-.top-grid{
-display:block;
 }
 
 }
