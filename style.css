@@ -83,4 +83,47 @@ p{
 
 font-size:16px;
 
+  .price-card{
+
+background:#111;
+border:1px solid #d4af37;
+padding:20px;
+margin-top:20px;
+border-radius:15px;
+
+}
+
+
+#goldPrice{
+
+font-size:40px;
+color:#d4af37;
+font-weight:bold;
+
+}
+
+
+#trend{
+
+color:#00ff66;
+
+}
+
+
+.live{
+
+color:#00ff66;
+font-weight:bold;
+animation:pulse 1s infinite;
+
+}
+
+
+@keyframes pulse{
+
+50%{
+opacity:0.4;
+}
+
+}
 }
